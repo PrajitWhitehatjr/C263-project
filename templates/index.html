@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        background-color: rgb(10, 162, 222);
+    }
+
+    h1 {
+        color: white;
+    }
+
+    h5 {
+        color: white
+    }
+
+    input[type='submit']{
+        background-color: rgb(18, 192, 18);
+        color: white;
+        margin: 4px;
+    }
+
+    footer {
+        background-color: white;
+        color: black;
+        width: 100%;
+        position: sticky;
+        vertical-align: middle;
+    }
+    
+
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+
+    <h1>Advanced Calculator</h1>
+    <img src="{{url_for('static', filename='img.png') }} ">
+    <form method="POST">
+        <label>Enter the Expression</label><br>
+        <select name="operation" class="is-focused is-large" aria-label="operationDropdown">
+            <option>Choose Operation</option>
+            <option value="simplify">Simplify</option>
+            <option value="factor">Factor</option>
+        </select>
+        <input placeholder="Expression" name="text">
+        <input type="submit">
+    </form>
+
+    <p>Your equation is {{equation}} = {{ result }}</p>
+
+    <footer>
+        <p>Created by Prajit Vasanthkumar</p>
+    </footer>
+
+</body>
+</html>
